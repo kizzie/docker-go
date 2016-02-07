@@ -5,7 +5,8 @@ To run:
 1. Clone the repository
 2. Run the docker-compose file
 
-``` git clone https://github.com/kizzie/docker-go.git
+```
+git clone https://github.com/kizzie/docker-go.git
 docker-compose up -d
 ```
 
@@ -16,7 +17,8 @@ Assumptions of the system setup:
 
 If you do not want to install docker-compose you can run the script file to start all three containers individually
 
-```./script.sh
+```
+./script.sh
 ```
 
 If you are on windows or a mac then you will need to use docker-machine.
