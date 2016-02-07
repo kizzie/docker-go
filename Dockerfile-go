@@ -1,13 +1,15 @@
 from ubuntu:14.04
 maintainer "kat.mcivor@gmail.com"
 
+#setup system
 run apt-get update
 run apt-get install -y golang
 
+#not really best practice, but caused problems when compiling on a different OS
+#copy in file and build
 copy app/app.go /
-
 run go build app.go
 
 expose 8484
 
-cmd /app
+entrypoint /app

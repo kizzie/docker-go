@@ -13,4 +13,4 @@ copy nginx/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
 expose 80
 
-CMD /usr/bin/supervisord
+entrypoint /usr/bin/supervisord
