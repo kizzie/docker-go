@@ -1,0 +1,13 @@
+from ubuntu:14.04
+maintainer "kat.mcivor@gmail.com"
+
+run apt-get update
+run apt-get install -y golang
+
+copy app/app.go /
+
+run go build app.go
+
+expose 8484
+
+cmd /app

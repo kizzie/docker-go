@@ -1,0 +1,16 @@
+app1:
+    build: .
+    dockerfile: Dockerfile-go
+
+app2:
+    build: .
+    dockerfile: Dockerfile-go
+
+web:
+  build: .
+  dockerfile: Dockerfile-nginx
+  ports:
+    - "80:80"
+  links:
+    - app1
+    - app2
