@@ -10,6 +10,8 @@ git clone https://github.com/kizzie/docker-go.git
 docker-compose up -d
 ```
 
+This builds and runs everything locally, but with docker-machine you could start up machines running in any cloud of your choice and host the files there. It does require knowing your AWS private key, or Azure subscription ID, so I'm not going to add it here!
+
 Assumptions of the system setup:
 * you have docker installed
 * you have docker-compose installed
@@ -44,3 +46,5 @@ docker-machine ls
 docker-compose up -d
 ```
 Although on the windows machine you are probably better off using the individual lines from the script than docker-compose as it has been known to be a pain.
+
+If we want to hook this into a CD environment then we could have app.go in a separate repository to nginx, and use a push notification to trigger an automatic build from the Docker hub (or trusted registry of your choice). Then send another notification through to something like Kubernetes, or swarm, however we are looking after the containers.
